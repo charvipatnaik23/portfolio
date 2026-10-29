@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags for SEO & ATS Crawlers -->
+  <title>Charvi Patnaik | Software Developer & Web Developer Portfolio (2026)</title>
+  <meta name="title" content="Charvi Patnaik | Software Developer & Web Developer Portfolio">
+  <meta name="description" content="Portfolio of Charvi Patnaik - Computer Science & Engineering student, Web Developer Intern, and IEEE Student Branch Secretary. Proficient in React, Vite, NestJS, Node.js, PostgreSQL, Docker, and C++/Python/Java.">
+  <meta name="keywords" content="Charvi Patnaik, Web Developer, Software Developer, Full Stack Developer, React, NestJS, PostgreSQL, TypeORM, JavaScript, Python, C++, Docker, Portfolio, 2026">
+  <meta name="author" content="Charvi Patnaik">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Charvi Patnaik | Software Developer Portfolio">
+  <meta property="og:description" content="Entry-level Web Developer and CSE student specializing in responsive, secure web applications, NestJS, React, and PostgreSQL.">
+  
+  <!-- Google Fonts Preconnect & Font Import (Inter & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ATS & SEO Structured Data (Schema.org JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Charvi Patnaik",
+    "jobTitle": "Software Developer & Web Developer Intern",
+    "telephone": "+91-8639829011",
+    "email": "charvipatnaik23@gmail.com",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Lendi Institute of Engineering and Technology"
+    },
+    "description": "Motivated computer science and engineering student possessing strong programming and problem-solving capabilities, seeking entry-level web developer position.",
+    "knowsAbout": [
+      "JavaScript", "Python", "Java", "C", "C++",
+      "React", "Vite", "HTML5", "CSS3",
+      "Node.js", "NestJS", "PostgreSQL", "SQL",
+      "TypeORM", "Docker", "Git", "GitHub", "Cybersecurity"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Web Developer",
+      "skills": "Full-stack web development, REST APIs, Database migrations, Secure authentication"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip link for accessibility & keyboard navigation -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Notification Toast Container -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-hidden="true"></div>
+
+  <!-- Global Header & Navigation -->
+  <header class="site-header" id="site-header">
+    <div class="header-container container">
+      <a href="#hero" class="brand-logo" aria-label="Charvi Patnaik Home">
+        <span class="logo-symbol">&lt;CP/&gt;</span>
+        <span class="logo-text">Charvi Patnaik</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#summary" class="nav-link">Summary</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Leadership</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Utilities -->
+      <div class="header-actions">
+        <!-- ATS Quick Action Button -->
+        <button id="ats-modal-btn" class="btn btn-outline btn-sm" aria-label="Open ATS Plain Text Resume">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <span>ATS Resume</span>
+        </button>
+
+        <!-- Print / PDF Resume Button -->
+        <button id="print-resume-btn" class="btn btn-ghost btn-icon" title="Print / Save ATS PDF" aria-label="Print or Save ATS Resume as PDF">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn btn-ghost btn-icon" aria-label="Toggle dark/light theme">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-btn" class="btn btn-ghost btn-icon mobile-only" aria-label="Open mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Nav -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#summary" class="mobile-nav-link">Summary</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Technical Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Leadership & Experience</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#competitions" class="mobile-nav-link">Competitions</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        <li class="mobile-cta-item">
+          <button id="mobile-ats-btn" class="btn btn-primary btn-block">View ATS Plain Text</button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark for ATS & Accessibility -->
+  <main id="main-content">
+    
+    <!-- Hero / Top Profile Section -->
+    <section id="hero" class="hero-section section-padding">
+      <div class="container hero-container">
+        
+        <div class="hero-content">
+          <div class="status-badge-wrapper">
+            <span class="status-indicator"></span>
+            <span class="status-text">Available for 2026/2027 Web Developer Internships & Full-Time Roles</span>
+          </div>
+
+          <h1 class="hero-name">Charvi Patnaik</h1>
+          <p class="hero-title">Software Developer | Web Developer Intern</p>
+          
+          <p class="hero-pitch">
+            Computer Science & Engineering student at <strong>Lendi IET</strong> (CGPA: <strong>8.40</strong>) crafting secure, responsive web applications with <strong>React, Vite, NestJS, and PostgreSQL</strong>, while exploring modern cybersecurity engineering.
+          </p>
+
+          <!-- Contact Badges / Quick Links -->
+          <div class="contact-badges-group" aria-label="Direct Contact Links">
+            <a href="mailto:charvipatnaik23@gmail.com" class="contact-chip" title="Send Email">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>charvipatnaik23@gmail.com</span>
+            </a>
+
+            <a href="tel:+918639829011" class="contact-chip" title="Call Charvi">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 8639829011</span>
+            </a>
+
+            <button class="contact-chip copy-chip" data-copy="charvipatnaik23@gmail.com" title="Copy Email to Clipboard">
+              <svg class="chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Action CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Selected Projects</span>
+              <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+
+            <button id="open-print-hero" class="btn btn-secondary">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              <span>Print / Download ATS Resume</span>
+            </button>
+          </div>
+
+          <!-- Quick Metrics / ATS Fast Facts Grid -->
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-num">8.40</span>
+              <span class="metric-label">B.Tech CGPA / 10</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">Secretary</span>
+              <span class="metric-label">IEEE Student Branch</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">24-Hr</span>
+              <span class="metric-label">IEEE Xtreme 19.0 Coder</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">Full-Stack</span>
+              <span class="metric-label">React + NestJS + Postgres</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Professional Summary Section (ATS Targeted) -->
+    <section id="summary" class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Overview</span>
+          <h2 class="section-title">Professional Summary</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="summary-card">
+          <p class="summary-paragraph">
+            Motivated <strong>Computer Science and Engineering</strong> student possessing strong programming and problem-solving capabilities, seeking an entry-level web developer position to apply technical knowledge in developing <strong>secure and responsive web applications</strong> while delving into <strong>cybersecurity</strong> and driving innovative technology solutions.
+          </p>
+          <div class="summary-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div>
+                <h4 class="highlight-title">Modern Web Engineering</h4>
+                <p class="highlight-desc">Hands-on experience developing modular frontend interfaces using React & Vite, coupled with robust server-side APIs built on Node.js and NestJS.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <h4 class="highlight-title">Secure Application Workflows</h4>
+                <p class="highlight-desc">Implemented complete authentication lifecycles with user activation, email verification, migration management, and automated test coverage.</p>
+              </div>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div>
+                <h4 class="highlight-title">Proven Leadership & Collaboration</h4>
+                <p class="highlight-desc">Active Secretary of the IEEE Student Branch, coordinating events, guiding cross-functional student teams, and competing in 24-hour coding hackathons.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section with Interactive Filter -->
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Core Competencies</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Categorized technical stack optimized for automated ATS keyword matching and modern engineering roles.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Skills Filter Controls -->
+        <div class="filter-controls" role="tablist" aria-label="Skill Categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+          <button class="filter-btn" data-filter="languages" role="tab" aria-selected="false">Programming Languages</button>
+          <button class="filter-btn" data-filter="frontend" role="tab" aria-selected="false">Frontend</button>
+          <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend & DB</button>
+          <button class="filter-btn" data-filter="devops" role="tab" aria-selected="false">Tools & DevOps</button>
+          <button class="filter-btn" data-filter="soft" role="tab" aria-selected="false">Professional Skills</button>
+        </div>
+
+        <!-- Skills Grid Container -->
+        <div class="skills-grid" id="skills-grid">
+          
+          <!-- Category: Programming Languages -->
+          <article class="skill-category-card" data-category="languages">
+            <div class="card-heading">
+              <span class="card-icon">⚡</span>
+              <h3>Programming Languages</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-pill"><span>JavaScript (ES6+)</span><span class="pill-badge">Core</span></li>
+              <li class="skill-pill"><span>Python</span><span class="pill-badge">Core</span></li>
+              <li class="skill-pill"><span>Java</span></li>
+              <li class="skill-pill"><span>C</span></li>
+              <li class="skill-pill"><span>C++</span><span class="pill-badge">DSA / Comp.</span></li>
+            </ul>
+          </article>
+
+          <!-- Category: Frontend -->
+          <article class="skill-category-card" data-category="frontend">
+            <div class="card-heading">
+              <span class="card-icon">🎨</span>
+              <h3>Frontend Development</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-pill"><span>React</span><span class="pill-badge">SPA</span></li>
+              <li class="skill-pill"><span>Vite</span><span class="pill-badge">Build Tool</span></li>
+              <li class="skill-pill"><span>HTML5</span><span class="pill-badge">Semantic</span></li>
+              <li class="skill-pill"><span>CSS3</span><span class="pill-badge">Responsive</span></li>
+              <li class="skill-pill"><span>State Management & UI Design</span></li>
+            </ul>
+          </article>
+
+          <!-- Category: Backend & Databases -->
+          <article class="skill-category-card" data-category="backend">
+            <div class="card-heading">
+              <span class="card-icon">⚙️</span>
+              <h3>Backend & Databases</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-pill"><span>Node.js</span><span class="pill-badge">Runtime</span></li>
+              <li class="skill-pill"><span>NestJS</span><span class="pill-badge">Architecture</span></li>
+              <li class="skill-pill"><span>PostgreSQL</span><span class="pill-badge">RDBMS</span></li>
+              <li class="skill-pill"><span>SQL</span><span class="pill-badge">Queries & Schemas</span></li>
+              <li class="skill-pill"><span>TypeORM</span><span class="pill-badge">Migrations & ORM</span></li>
+              <li class="skill-pill"><span>RESTful APIs</span></li>
+            </ul>
+          </article>
+
+          <!-- Category: Tools & Other Technologies -->
+          <article class="skill-category-card" data-category="devops">
+            <div class="card-heading">
+              <span class="card-icon">🛠️</span>
+              <h3>Tools & DevOps</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-pill"><span>Docker</span><span class="pill-badge">Containers</span></li>
+              <li class="skill-pill"><span>Git</span><span class="pill-badge">Version Control</span></li>
+              <li class="skill-pill"><span>GitHub</span><span class="pill-badge">CI/Workflows</span></li>
+              <li class="skill-pill"><span>Visual Studio Code</span></li>
+              <li class="skill-pill"><span>OpenCode</span></li>
+            </ul>
+          </article>
+
+          <!-- Category: Professional & Leadership Skills -->
+          <article class="skill-category-card" data-category="soft">
+            <div class="card-heading">
+              <span class="card-icon">🤝</span>
+              <h3>Professional Skills</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-pill"><span>Leadership</span></li>
+              <li class="skill-pill"><span>Good Communication</span></li>
+              <li class="skill-pill"><span>Team Management</span></li>
+              <li class="skill-pill"><span>Teamwork & Collaboration</span></li>
+              <li class="skill-pill"><span>Analytical Problem-Solving</span></li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Real-world applications showcasing full-stack development, database architecture, and teamwork.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: TinyWin -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-title-wrap">
+                <span class="project-badge individual-badge">Individual Project</span>
+                <h3 class="project-name">TinyWin</h3>
+                <p class="project-tagline">Personalized Skill-Learning Web Application</p>
+              </div>
+            </div>
+
+            <div class="project-tech-stack" aria-label="Technologies Used">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">NestJS</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">TypeORM</span>
+              <span class="tech-tag">Auth Tests</span>
+            </div>
+
+            <p class="project-summary">
+              A comprehensive personalized learning platform that dynamically tailors learning milestones and daily actionable tasks to users’ selected skills, current proficiency levels, career goals, and daily available time budget.
+            </p>
+
+            <div class="project-details">
+              <h4 class="details-heading">Key Implementation & Impact:</h4>
+              <ul class="bullet-list">
+                <li><strong>Dynamic Task Generation:</strong> Engineered algorithms that generate customized daily learning tasks adapted to user constraints and continuous learning goals.</li>
+                <li><strong>Secure Auth Workflows:</strong> Implemented end-to-end user registration, secure login, and email verification/activation workflows.</li>
+                <li><strong>Progress Analytics Dashboard:</strong> Built reactive dashboard functionality to display daily learning tasks, completion streaks, and granular progress metrics.</li>
+                <li><strong>Database & Migrations:</strong> Structured relational database schemas in PostgreSQL with TypeORM migrations to guarantee structured data management and version control.</li>
+                <li><strong>Automated Testing:</strong> Developed automated authentication-flow tests and validated core application business logic locally before release.</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-role-tag">
+                <strong>Role:</strong> Full-Stack Developer (Solo)
+              </div>
+              <div class="project-links">
+                <button class="btn btn-sm btn-outline copy-details-btn" data-project="TinyWin">
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                  <span>Copy Summary</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: WalkNTrack -->
+          <article class="project-card">
+            <div class="project-header">
+              <div class="project-title-wrap">
+                <div class="badge-row">
+                  <span class="project-badge team-badge">Team Project</span>
+                  <span class="project-badge deployed-badge">Reported as Deployed</span>
+                </div>
+                <h3 class="project-name">WalkNTrack</h3>
+                <p class="project-tagline">Smart Attendance System</p>
+              </div>
+            </div>
+
+            <div class="project-tech-stack" aria-label="Technologies Used">
+              <span class="tech-tag">Frontend & UI</span>
+              <span class="tech-tag">NFC Identification</span>
+              <span class="tech-tag">Facial Recognition</span>
+              <span class="tech-tag">Cloud Server</span>
+              <span class="tech-tag">Admin Application</span>
+              <span class="tech-tag">Student Portal</span>
+            </div>
+
+            <p class="project-summary">
+              An intelligent, multi-modal automated attendance management solution integrating contactless NFC identification, facial recognition, and a centralized cloud server to streamline campus attendance tracking.
+            </p>
+
+            <div class="project-details">
+              <h4 class="details-heading">Key Implementation & Impact:</h4>
+              <ul class="bullet-list">
+                <li><strong>Frontend & UI Development:</strong> Spearheaded responsive user interface development for intuitive user experience across devices.</li>
+                <li><strong>Requirements & Architecture:</strong> Contributed heavily to project research, specifications gathering, and architectural diagrams.</li>
+                <li><strong>Hardware-Cloud Integration:</strong> Collaborated on an integrated concept linking NFC-based identification and facial recognition with cloud databases.</li>
+                <li><strong>Multi-Portal Architecture:</strong> Structured interfaces for a dedicated faculty/admin management console alongside an accessible student inquiry portal.</li>
+                <li><strong>Team Coordination:</strong> Supported technical presentations, synchronized sprint deliverables, and maintained cross-member accountability.</li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-role-tag">
+                <strong>Role:</strong> Frontend Developer & Team Coordinator
+              </div>
+              <div class="project-links">
+                <button class="btn btn-sm btn-outline copy-details-btn" data-project="WalkNTrack">
+                  <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                  <span>Copy Summary</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Leadership & Service</span>
+          <h2 class="section-title">Experience & Leadership</h2>
+          <p class="section-subtitle">Demonstrated commitment to student branch governance, technical initiatives, and organizational leadership.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="role-title">Secretary — IEEE Student Branch</h3>
+                  <p class="institution-name">Lendi Institute of Engineering and Technology</p>
+                </div>
+                <div class="timeline-meta">
+                  <span class="meta-badge">Executive Leadership</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="bullet-list">
+                  <li><strong>Branch Governance:</strong> Serve as Secretary of the IEEE Student Branch, directing and supporting student branch activities, operational logistics, and formal coordination.</li>
+                  <li><strong>Communication & Alignment:</strong> Facilitate clear communication channels between student members, executive officers, faculty coordinators, and regional organizers.</li>
+                  <li><strong>Event & Program Planning:</strong> Lead the planning, promotion, and execution of technical workshops, competitive events, and student growth initiatives.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitions & Hackathons Section -->
+    <section id="competitions" class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Competitions & Problem Solving</span>
+          <h2 class="section-title">Competitions & Participation</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="competition-card">
+          <div class="comp-icon-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+          </div>
+          <div class="comp-body">
+            <div class="comp-meta">
+              <span class="comp-badge">Global Competition</span>
+              <span class="comp-duration">24-Hour Marathon</span>
+            </div>
+            <h3 class="comp-title">IEEE Xtreme 19.0 — 24-Hour Programming Competition</h3>
+            <p class="comp-institution">IEEE Global Virtual Hackathon</p>
+            <ul class="bullet-list mt-2">
+              <li>Competed in the intense, worldwide 24-hour non-stop competitive programming challenge.</li>
+              <li>Honed rapid algorithmic problem solving, optimized data structures, and maintained stamina and precision under strict time limits.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Background</span>
+          <h2 class="section-title">Education</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="education-grid">
+          
+          <!-- B.Tech -->
+          <article class="edu-card featured-edu">
+            <div class="edu-top">
+              <span class="edu-period">Currently in 3rd Year | Expected: 2028</span>
+              <span class="gpa-badge">CGPA: 8.40 / 10</span>
+            </div>
+            <h3 class="edu-degree">B.Tech — Computer Science and Engineering</h3>
+            <p class="edu-school">Lendi Institute of Engineering and Technology</p>
+            <p class="edu-note">Comprehensive coursework in Data Structures, Algorithms, Database Management Systems, Computer Networks, Operating Systems, and Object-Oriented Software Engineering.</p>
+          </article>
+
+          <!-- Intermediate -->
+          <article class="edu-card">
+            <div class="edu-top">
+              <span class="edu-period">Intermediate Education</span>
+              <span class="score-badge">82%</span>
+            </div>
+            <h3 class="edu-degree">Intermediate — MPC (Maths, Physics, Chemistry)</h3>
+            <p class="edu-school">Sri Chaitanya Junior College</p>
+            <p class="edu-note">Built a solid mathematical foundation in calculus, algebra, and physics principles.</p>
+          </article>
+
+          <!-- Class 10 -->
+          <article class="edu-card">
+            <div class="edu-top">
+              <span class="edu-period">Secondary School</span>
+              <span class="score-badge">80%</span>
+            </div>
+            <h3 class="edu-degree">Secondary School Certificate (Class 10)</h3>
+            <p class="edu-school">Sri Prakash Vidya Niketan</p>
+            <p class="edu-note">Foundational secondary education with distinction in science and mathematics.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="section-padding bg-surface">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Communication</span>
+          <h2 class="section-title">Languages</h2>
+          <p class="section-subtitle">Multilingual fluency enabling seamless communication in multicultural teams.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="languages-grid">
+          <div class="language-card">
+            <span class="lang-code">EN</span>
+            <div class="lang-info">
+              <h4 class="lang-name">English</h4>
+              <p class="lang-level">Professional Working Proficiency</p>
+            </div>
+          </div>
+
+          <div class="language-card">
+            <span class="lang-code">TE</span>
+            <div class="lang-info">
+              <h4 class="lang-name">Telugu</h4>
+              <p class="lang-level">Native / Fluent</p>
+            </div>
+          </div>
+
+          <div class="language-card">
+            <span class="lang-code">HI</span>
+            <div class="lang-info">
+              <h4 class="lang-name">Hindi</h4>
+              <p class="lang-level">Fluent Working Proficiency</p>
+            </div>
+          </div>
+
+          <div class="language-card">
+            <span class="lang-code">OR</span>
+            <div class="lang-info">
+              <h4 class="lang-name">Oriya (Odia)</h4>
+              <p class="lang-level">Conversational / Native</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact & Hiring</h2>
+          <p class="section-subtitle">Currently seeking entry-level Web Developer and Software Developer opportunities in 2026/2027.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Direct Details -->
+          <div class="contact-info-panel">
+            <h3 class="panel-title">Let's build something secure & scalable.</h3>
+            <p class="panel-desc">
+              Whether you have an internship opening, entry-level developer position, or would like to discuss web application engineering and cybersecurity, I'd love to connect.
+            </p>
+
+            <div class="contact-items-list">
+              <div class="contact-item">
+                <div class="item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="item-text">
+                  <span class="item-label">Direct Email</span>
+                  <a href="mailto:charvipatnaik23@gmail.com" class="item-value">charvipatnaik23@gmail.com</a>
+                </div>
+                <button class="btn btn-ghost btn-sm copy-btn" data-copy="charvipatnaik23@gmail.com" aria-label="Copy Email">Copy</button>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="item-text">
+                  <span class="item-label">Phone</span>
+                  <a href="tel:+918639829011" class="item-value">+91 8639829011</a>
+                </div>
+                <button class="btn btn-ghost btn-sm copy-btn" data-copy="8639829011" aria-label="Copy Phone">Copy</button>
+              </div>
+
+              <div class="contact-item">
+                <div class="item-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="item-text">
+                  <span class="item-label">Location</span>
+                  <span class="item-value">Andhra Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick ATS resume callout -->
+            <div class="ats-callout-card">
+              <div class="callout-header">
+                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <strong>ATS-Ready Candidate Profile</strong>
+              </div>
+              <p>Need to run this resume through your corporate ATS system (Taleo, Greenhouse, Lever, Workday)? Use our 1-click ATS Plain Text converter or ATS Print View.</p>
+              <div class="callout-btns">
+                <button id="callout-ats-btn" class="btn btn-outline btn-sm">Open ATS Text Format</button>
+                <button id="callout-print-btn" class="btn btn-primary btn-sm">Save ATS PDF</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form">
+              <h3 class="form-title">Send a Quick Message</h3>
+              
+              <div class="form-group">
+                <label for="form-name">Your Name / Recruiter Name *</label>
+                <input type="text" id="form-name" name="name" required placeholder="e.g. Sarah Jenkins (Tech Talent)">
+              </div>
+
+              <div class="form-group">
+                <label for="form-email">Your Work Email *</label>
+                <input type="email" id="form-email" name="email" required placeholder="e.g. sarah@company.com">
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject">Subject *</label>
+                <input type="text" id="form-subject" name="subject" required placeholder="e.g. Web Developer Opportunity / Internship 2026">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Message Details *</label>
+                <textarea id="form-message" name="message" rows="4" required placeholder="Hi Charvi, we loved your work on TinyWin and would like to invite you for an interview..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Send Message via Email Client</span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <p class="form-hint">Submitting prepares a pre-filled direct email to Charvi Patnaik.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <p class="footer-name">Charvi Patnaik — 2026 Developer Portfolio</p>
+        <p class="footer-sub">Built with semantic HTML5, modern CSS3 & Vanilla JavaScript. Zero runtime dependencies. 100% ATS Friendly.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" aria-label="Back to top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- ATS PLAIN-TEXT MODAL (Engineered for instant copy into ATS submission forms) -->
+  <!-- ========================================================================= -->
+  <div id="ats-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modal-title" class="modal-title">ATS-Standard Plain Text Resume</h3>
+          <p class="modal-sub">Formatted without special characters or tables so automated applicant tracking systems parse 100% of keywords cleanly.</p>
+        </div>
+        <button id="close-modal-btn" class="btn-close" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-actions-bar">
+          <button id="copy-ats-text-btn" class="btn btn-primary btn-sm">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Full Plain Text</span>
+          </button>
+          <button id="print-from-modal-btn" class="btn btn-outline btn-sm">
+            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            <span>Print ATS View</span>
+          </button>
+        </div>
+
+        <textarea id="ats-plain-text-area" class="ats-textarea" readonly aria-label="ATS Formatted Resume Text">
+CHARVI PATNAIK
+Software Developer | Web Developer Intern
+Phone: +91 8639829011
+Email: charvipatnaik23@gmail.com
+Location: Andhra Pradesh, India
+
+PROFESSIONAL SUMMARY
+Motivated computer science and engineering student possessing strong programming and problem-solving capabilities, seeking entry-level web developer position to apply technical knowledge in developing secure and responsive web applications while delving into cybersecurity and driving innovative technology solutions.
+
+TECHNICAL SKILLS
+- Programming Languages: JavaScript, Python, Java, C, C++
+- Frontend Development: HTML, CSS, React, Vite, Responsive Design
+- Backend Development: Node.js, NestJS, RESTful APIs
+- Databases & ORM: PostgreSQL, SQL, TypeORM, Database Migrations
+- DevOps & Tools: Docker, Git, GitHub, Visual Studio Code, OpenCode
+- Professional Skills: Leadership, Good Communication, Team Management, Teamwork, Problem-Solving
+
+EXPERIENCE & LEADERSHIP
+Secretary — IEEE Student Branch
+Lendi Institute of Engineering and Technology
+- Serve as Secretary of the IEEE Student Branch, supporting student branch activities and coordination.
+- Contribute to communication and coordination among student members, organizers, and faculty.
+- Support the planning, logistics, and organization of technical activities and student initiatives.
+
+PROJECTS
+TinyWin — Personalized Skill-Learning Web Application
+Individual Project | Tech: React, Vite, NestJS, PostgreSQL, TypeORM
+- Developed a personalized learning platform that tailors learning tasks to users' selected skills, proficiency levels, goals, and daily available time.
+- Implemented user registration, secure login, and email activation workflows.
+- Built dashboard functionality to display daily learning tasks and track continuous learning progress.
+- Worked with PostgreSQL, TypeORM, and database migrations to support structured application data management.
+- Created automated authentication-flow tests and tested core application workflows locally.
+
+WalkNTrack — Smart Attendance System
+Team Project | Status: Reported as deployed
+Technologies: Frontend & UI, NFC Identification, Facial Recognition, Cloud Server, Admin Console, Student Portal
+- Contributed to project research and requirements gathering for a smart attendance system.
+- Spearheaded frontend and user-interface development for responsive mobile and web interfaces.
+- Supported project presentations and team coordination across sprint milestones.
+- Worked on a project concept integrating NFC-based identification, facial recognition, a cloud server, a faculty/admin application, and a student portal.
+
+COMPETITIONS & PARTICIPATION
+IEEE Xtreme 19.0 — 24-Hour Programming Competition
+- Participated in the worldwide 24-hour virtual competitive programming competition.
+- Gained rigorous experience with competitive programming, problem-solving, and executing under intense time constraints.
+
+EDUCATION
+B.Tech — Computer Science and Engineering
+Lendi Institute of Engineering and Technology
+Currently in 3rd year | Expected Graduation: 2028 | CGPA: 8.40/10
+
+Intermediate — MPC (Mathematics, Physics, Chemistry)
+Sri Chaitanya Junior College
+Percentage: 82%
+
+Secondary School Education — Class 10
+Sri Prakash Vidya Niketan
+Percentage: 80%
+
+LANGUAGES
+- English (Professional Working Proficiency)
+- Telugu (Native / Fluent)
+- Hindi (Fluent)
+- Oriya / Odia (Native / Conversational)
+        </textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="script.js"></script>
+</body>
+</html>
